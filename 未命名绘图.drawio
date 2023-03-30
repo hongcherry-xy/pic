@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-03-30T06:26:55.932Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15" etag="NybMLBRfiSZMWZ8ixTO3" version="21.1.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-03-30T06:34:52.061Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.3 Safari/605.1.15" etag="Ar5Bx1Ty03KeQAzk0X6h" version="21.1.2" type="github">
   <diagram name="第 1 页" id="kCN1_iKE20PufwVcxa9_">
-    <mxGraphModel dx="838" dy="624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1665" dy="624" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -123,6 +123,71 @@
             <Array as="points">
               <mxPoint x="10" y="10" />
             </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-37" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="8SQksZUqZ6TJ-8i5Vpym-38">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="410" as="sourcePoint" />
+            <mxPoint x="270" y="374" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="260" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-40" value="" style="curved=1;endArrow=classic;html=1;rounded=0;" edge="1" parent="1" source="8SQksZUqZ6TJ-8i5Vpym-46" target="8SQksZUqZ6TJ-8i5Vpym-38">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="260" y="410" as="sourcePoint" />
+            <mxPoint x="270" y="374" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="250" y="400" />
+              <mxPoint x="260" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-38" value="check&lt;br&gt;point" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="245" y="360" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-41" value="丢失的RDD向前寻找时，由于checkpoint切段了之前的依赖关系，优先从checkpoint恢复RDD，不经过计算逻辑非常复杂的过程" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="90" y="475" width="350" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-42" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="420" as="sourcePoint" />
+            <mxPoint x="580" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-43" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="580" y="340" as="sourcePoint" />
+            <mxPoint x="10" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-44" value="action的job完成后，从后往前回溯并标记哪些RDD使用checkpoint" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8SQksZUqZ6TJ-8i5Vpym-43">
+          <mxGeometry x="0.0167" y="2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-45" value="" style="endArrow=none;html=1;rounded=0;exitX=0;exitY=0.2;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="8SQksZUqZ6TJ-8i5Vpym-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="370" as="sourcePoint" />
+            <mxPoint x="10" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="10" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-46" value="" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="400" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-51" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="10" y="290" as="sourcePoint" />
+            <mxPoint x="240" y="370" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8SQksZUqZ6TJ-8i5Vpym-54" value="回溯到起始位置后，重新计算做了标记的RDD数据，并把数据传入checkpoint中" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8SQksZUqZ6TJ-8i5Vpym-51">
+          <mxGeometry x="-0.6624" y="1" relative="1" as="geometry">
+            <mxPoint x="91" y="7" as="offset" />
           </mxGeometry>
         </mxCell>
       </root>
